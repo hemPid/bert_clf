@@ -21,3 +21,15 @@ For this task two models were used
 |-----------------------|----------|--------|----------|
 | TF-IDF + Logistic Reg | 1.000    | 0.799  | 0.888    |
 | BERT-base             | 0.960    | 0.966  | 0.963    |
+
+## Key Findings
+
+- Baseline model already shows good results due to clear lexical patterns in spam messages.
+- BERT improves recall by capturing contextual information.
+- However, overall gains are moderate due to the simplicity of the dataset.
+
+## Error Analysis
+Baseline shows good performance due to clear lexical patterns in spam messages. But it can miss spam messages without explicit keywords.
+For example:
+"TheMob>Hit the link to get a premium Pink Panther game, the new no. 1 from Sugababes, a crazy Zebra animation or a badass Hoody wallpaper-all 4 FREE!"
+The model classifies it as ham, while BERT correctly identifies it as spam.BERT performs better on such cases due to contextual understanding.
